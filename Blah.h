@@ -2,9 +2,14 @@
 #include <iostream>
 #include <optional>
 
-namespace A::B {
+namespace A {
+namespace B {
 class Blah {
 public:
-  void foo() { std::cout << "Inside Blah::foo()\n"; }
+  void foo() {
+    std::cout << "Inside Blah::foo()\n";
+    std::cout << "Inside Blah::foo()\n";
+  }
 };
-} // namespace A::B
+}  // namespace B
+}  // namespace A
