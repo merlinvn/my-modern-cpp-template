@@ -10,6 +10,6 @@ test:
 setup:
 	rm -rf build
 	cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .
-	ln -sf $(PWD)build/compile_commands.json $(PWD)
+	cp $(PWD)build/compile_commands.json $(PWD)
 
 
