@@ -1,5 +1,14 @@
 # My modern C++ template project
 
+
+## First step
+
+1. Edit CMakeLists.txt
+  * Change project name
+  * Change the C++ standard (if needed)
+
+
+
 ## Commands
 
 ### Setup
