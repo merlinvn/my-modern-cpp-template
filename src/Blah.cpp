@@ -5,7 +5,7 @@ namespace A::B {
 void A::B::Blah::test() {
   int g{0};
   //= 0 + 'A';
-
+  foo();
   std::cout << "This is a test" << std::endl;
 }
 
