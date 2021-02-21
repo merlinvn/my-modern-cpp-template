@@ -5,13 +5,32 @@
 1. Edit CMakeLists.txt
   * Change project name
   * Change the C++ standard (if needed)
+2. Bootstrap vcpkg
+  * Install dependent libraries
+3. Build
 
 ## vcpkg
+
+### Setup vcpkg
 
 To use vcpkg as submodule for new project
 
 ```bash
 git submodule update --init
+```
+
+Then we can bootstrap vcpkg by
+
+```bash
+./ext/vcpkg/bootstrap-vcpkg.sh
+```
+### Install dependency libraries
+
+To install `fmt`, just simply call the following command from the root
+directory of the project
+
+```bash
+./ext/vcpkg/vcpkg install fmt
 ```
 
 ## Commands
