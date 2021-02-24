@@ -1,13 +1,13 @@
 # My modern C++ template project
 
-## First step
+## How to work with this template
 
 1. Edit CMakeLists.txt
   * Change project name
   * Change the C++ standard (if needed)
 2. Bootstrap vcpkg
-  * Install dependent libraries
-3. Build
+3. Install dependent libraries
+4. Build
 
 ## vcpkg
 
@@ -33,9 +33,7 @@ directory of the project
 ./ext/vcpkg/vcpkg install fmt
 ```
 
-## Commands
-
-### Setup
+### Build
 
 To create a build folder
 ```bash
@@ -47,6 +45,7 @@ To compile
 make
 ```
 
+### Other commands
 
 
 ## References:

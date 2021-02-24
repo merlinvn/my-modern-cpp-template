@@ -5,7 +5,6 @@
 #include "Blah.h"
 
 int main() {
-  // std::optional<bool> blah;
 
   A::B::Blah b;
   b.foo();
