@@ -15,4 +15,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_subdirectory(src)
 
-add_subdirectory(test)
+option(PACKAGE_TESTS "Build the tests" ON)
+if(PACKAGE_TESTS)
+  enable_testing()
+  add_subdirectory(test)
+endif()
+

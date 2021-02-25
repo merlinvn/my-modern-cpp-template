@@ -8,9 +8,13 @@ int Factorial(int n) {
 }
 
 // Tests factorial of 0.
-TEST(FactorialTest, HandlesZeroInput) { EXPECT_EQ(Factorial(0), 1); }
+// NOLINTNEXTLINE
+TEST(FactorialTest, HandlesZeroInput) {
+  EXPECT_EQ(Factorial(0), 1);
+}
 
 // Tests factorial of positive numbers.
+// NOLINTNEXTLINE
 TEST(FactorialTest, HandlesPositiveInput) {
   EXPECT_EQ(Factorial(1), 1);
   EXPECT_EQ(Factorial(2), 2);

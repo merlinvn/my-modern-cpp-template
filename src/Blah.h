@@ -6,7 +6,7 @@
 namespace A::B {
 class Blah {
 public:
-  void foo() {
+  void bar() {
     std::cout << "Inside Blah::foo()\n";
     std::cout << "Inside Blah::foo()\n";
   }
