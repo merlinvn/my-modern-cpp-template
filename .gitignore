@@ -1,7 +1,10 @@
 [Bb]uild/*
 
-
 .clangd/*
 .cache/*
 
+Testing/*
+
 compile_commands.json
+
+

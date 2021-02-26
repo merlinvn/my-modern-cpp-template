@@ -17,7 +17,7 @@ clean:
 
 setup:
 	rm -rf build
-	cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .
+	cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=1 . -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
 	cp $(PWD)build/compile_commands.json $(PWD)
 
 

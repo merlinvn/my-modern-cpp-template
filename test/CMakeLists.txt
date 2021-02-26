@@ -2,15 +2,9 @@ find_package(fmt CONFIG REQUIRED)
 find_package(GTest CONFIG REQUIRED)
 
 include(GoogleTest)
-# set(SRC_TEST sample_test.cpp)
-#
-# # add the executable
-# add_executable(main_test ${SRC_TEST})
-#
-# target_link_libraries(main_test PRIVATE fmt::fmt-header-only GTest::gtest GTest::gtest_main)
-#
 
-add_custom_target(build_and_test ${CMAKE_CTEST_COMMAND} -V)
+add_custom_target(build_and_test
+    COMMAND env GTEST_COLOR=1 ${CMAKE_CTEST_COMMAND} -V)
 
 macro(package_add_test TESTNAME)
     # create an exectuable in which the tests will be stored
