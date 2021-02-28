@@ -1,4 +1,5 @@
-# My modern C++ template project
+# My modern C++ template
+![CI](https://github.com/merlinvn/my-modern-cpp-template/actions/workflows/ci.yml/badge.svg)
 
 ## How to work with this template
 
