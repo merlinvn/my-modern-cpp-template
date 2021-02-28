@@ -24,5 +24,5 @@ void read_file_to_vector(std::vector<int>& my_vector) {
 TEST(ReadFileTest, can_read_10_numbers_from_file) {
   std::vector<int> v_int;
   read_file_to_vector(v_int);
-  EXPECT_EQ(v_int.size(), 10);
+  EXPECT_EQ(v_int.size(), 1);
 }
