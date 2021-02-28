@@ -37,12 +37,12 @@ directory of the project
 
 To create a build folder
 ```bash
-make setup
+make generate
 ```
 
 To compile
 ```bash
-make
+make build
 ```
 
 ### Other commands
