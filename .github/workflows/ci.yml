@@ -16,14 +16,13 @@ jobs:
     name: Build and run test
     # Set the type of machine to run on
     runs-on: ubuntu-latest
-
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: Checkout code
         uses: actions/checkout@v2
       - name: apt update
         run: sudo apt update
-      - name: apt install libsystemd-dev
+      - name: apt install build-essential cmake
         run: sudo apt install -y build-essential cmake
-      - name: Build
+      - name: Build and run test
         run: make ci
