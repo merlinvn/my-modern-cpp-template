@@ -16,8 +16,8 @@ test:
 clean:
 	rm -rf build
 
-generate-vcpkg:
-	rm -rf build
+gvc: generate-vcpkg
+generate-vcpkg: clean
 	if [ ! -x "./ext/vcpkg/vcpkg" ]; then \
 		git submodule update --init; \
 		./ext/vcpkg/bootstrap-vcpkg.sh; \
@@ -28,9 +28,15 @@ generate-vcpkg:
 	cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=1 .
 	cp $(PWD)build/compile_commands.json $(PWD)
 
-generate:
-	rm -rf build
+g: generate
+generate: clean
 	cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=1 . -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
+	cp $(PWD)build/compile_commands.json $(PWD)
+
+g0t: generate_without_test
+
+generate_without_test: clean
+	cmake -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DWITH_TESTS=0 . -DCMAKE_TOOLCHAIN_FILE=../vcpkg/scripts/buildsystems/vcpkg.cmake
 	cp $(PWD)build/compile_commands.json $(PWD)
 
 
