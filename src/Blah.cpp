@@ -1,7 +1,6 @@
 #include "Blah.h"
 
 namespace A::B {
-
 void A::B::Blah::test() {
   int g{0};
   //= 0 + 'A';

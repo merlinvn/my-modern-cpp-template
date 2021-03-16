@@ -1,7 +1,6 @@
 #include <iostream>
 #include <optional>
 #include <fmt/format.h>
-
 #include "Blah.h"
 
 int main() {
